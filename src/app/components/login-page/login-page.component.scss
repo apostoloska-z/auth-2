@@ -1,0 +1,72 @@
+.login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-container {
+    width: 100%;
+    max-width: 24rem;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 0.625rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 3rem;
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .login-page__logo {
+    display: flex;
+    justify-content: center;
+  
+    img {
+      width: 160px;
+    }
+  }
+    
+  .login-page__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    p {
+      margin: 1rem 0 1.5rem;
+      font: 500 20px / 32px Roboto, "Helvetica Neue", sans-serif;
+    }
+  }
+  
+  .login-page__form {
+    width: 100%
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  mat-label {
+    color: black;
+    font-size: 14px;
+  }
+  
+  .login-button {
+    width: 100%;
+  }
+  
+  .invalid-feedback {
+    color: #1c1c1bff;
+    padding-bottom: 0.75rem;
+    padding-top: -2rem;
+    text-align: center;
+    font:  500 15px / 32px Roboto, "Helvetica Neue", sans-serif;
+  }
+  
+  .invalid-feedback__email {
+    padding-bottom: -2rem;
+  }
+  
+  .error {
+    padding: 0.5rem 0;
+    text-align: center;
+  }
