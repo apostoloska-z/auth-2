@@ -7,9 +7,10 @@ import { AppState } from '../store/app.states';
 import { AuthSelectors } from '../store/selectors/auth.selectors';
 import { map } from "rxjs/operators";
 
+
 @Injectable({providedIn: 'root'})
 export class AuthGuard implements CanActivate {
-    constructor(private store$: Store<AppState>) {}
+    constructor(private store$: Store<AppState>, private router: Router,) {}
 
 
     canActivate(route: ActivatedRouteSnapshot, state:RouterStateSnapshot): any{
@@ -23,11 +24,15 @@ export class AuthGuard implements CanActivate {
         //         return true;
         //     })
         // )
-
         let loggedIn;
         this.store$.select(AuthSelectors.isAuthenticated).subscribe(data => loggedIn = data);
         console.log(loggedIn);
-        return loggedIn;
+        if(loggedIn) {
+            return true
+        } else {
+            this.router.navigateByUrl('login');
+            return false;
+        }
     }
 
 }

@@ -35,11 +35,6 @@ import { ErrorInterceptor } from './interceptors/errors.interceptor';
     HttpClientModule,
     StoreModule.forRoot({'Auth': reducer}),
     EffectsModule.forRoot([LoginEffect]),
-    RouterModule.forRoot([
-      { path: 'login', component: LoginPageComponent },
-      { path: '', component: HomePageComponent, canActivate: [AuthGuard] },
-      { path: '**', redirectTo: '/' }
-    ]),
     BrowserAnimationsModule
   ],
   providers: [
