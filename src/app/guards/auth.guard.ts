@@ -24,9 +24,10 @@ export class AuthGuard implements CanActivate {
         //     })
         // )
 
-        return this.store$.select(AuthSelectors.isAuthenticated).subscribe(data => {
-        console.log(data);
-        return data})
+        let loggedIn;
+        this.store$.select(AuthSelectors.isAuthenticated).subscribe(data => loggedIn = data);
+        console.log(loggedIn);
+        return loggedIn;
     }
 
 }
