@@ -54,6 +54,7 @@ export class LoginPageComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log('hello')
 
     if (this.loginForm.invalid) {
       console.log('The information you have entered is not valid');
