@@ -41,7 +41,7 @@ export class LoginPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('hehehehey4444 66667773433 7777777777777 999999999999 1111')
+    console.log('hehehehey4444 66667773433 7777777777777 999999999999 1111 555555')
     this.token$.subscribe(data => {
       console.log(data)
       localStorage.setItem('token', data);
