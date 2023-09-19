@@ -41,6 +41,7 @@ export class LoginPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log('hehehehey')
     this.token$.subscribe(data => {
       console.log(data)
       localStorage.setItem('token', data);
